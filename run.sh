@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" = "train" ]; then
-	CUDA_VISIBLE_DEVICES=0 python33 run.py train --train-src=./en_es_data/train.es --train-tgt=./en_es_data/train.en \
+	CUDA_VISIBLE_DEVICES=0 python3 run.py train --train-src=./en_es_data/train.es --train-tgt=./en_es_data/train.en \
         --dev-src=./en_es_data/dev.es --dev-tgt=./en_es_data/dev.en --vocab=vocab.json --cuda --batch-size=2
 
 elif [ "$1" = "test" ]; then
